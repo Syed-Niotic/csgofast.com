@@ -1,2 +1,2 @@
 # csgofast.com
-message for atom.
+message for a
