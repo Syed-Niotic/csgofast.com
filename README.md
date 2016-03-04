@@ -14,4 +14,3 @@ The Project CSGOFAST.COM is a Service for Counter-Strike: Global Offensive playe
 > 2. Put an actual Trade Offer link into a Settings (You can get your actual link here)
 > 3. Make your inventory public in the Steam Profile
 > 4. Select the game, place a bet and try your luck!
-> 5. Test message
