@@ -1,18 +1,18 @@
-var ejs = require('ejs')
-var path = require('path')
-var express = require('express')
-var port = process.env.PORT || 3000
+var ejs      = require('ejs')
+var path     = require('path')
+var express  = require('express')
+var port     = process.env.PORT || 3000
+var partials = require('express-partials')
 
 var routes = require('./routes/index')
 var users  = require('./routes/users')
 
 var app = express()
 
-// app.set('views', './views/pages')
-app.set('views', './static')
+app.set('views', './views')
 
-// app.set('view engine', 'jade')
-app.engine('html', ejs.renderFile)
+app.use(partials())
+app.set('view engine', 'ejs')
 
 app.use(express.static(path.join(__dirname, 'public')))
 app.use(express.static(path.join(__dirname, 'bower_components')))
