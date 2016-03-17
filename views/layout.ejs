@@ -1,17 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
     <head>
-        <meta charset="utf-8">
+        <meta charset="UTF-8">
         <title><%= title %></title>
-        <%- include ./includes/head.ejs %>
+        <% include ./includes/head.ejs %>
     </head>
+
     <body>
-        <%- include ./includes/header.ejs %>
+        <% include ./includes/header.ejs %>
 
         <div class="container">
             <div class="row">
                 <%- body %>
             </div>
         </div>
+
     </body>
+
 </html>
