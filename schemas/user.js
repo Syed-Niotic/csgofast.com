@@ -21,14 +21,14 @@ UserSchema.static = {
         return this
             .find({})
             .sort('')
-        exec(cb)
+            .exec(cb)
     },
     findById: function(id, cb) {
         return this
             .findOne({
                 _id: id
             })
-        exec(cb)
+            .exec(cb)
     }
 }
 

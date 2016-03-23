@@ -1,11 +1,11 @@
-var ejs             = require('ejs')
-var path            = require('path')
-var express         = require('express')
-var passport        = require('passport')
-var port            = process.env.PORT || 3000
-var session         = require('express-session')
-var partials        = require('express-partials')
-var SteamStrategy   = require('passport-steam').Strategy
+var ejs = require('ejs')
+var path = require('path')
+var express = require('express')
+var passport = require('passport')
+var port = process.env.PORT || 3000
+var session = require('express-session')
+var partials = require('express-partials')
+var SteamStrategy = require('passport-steam').Strategy
 
 // Passport session setup.
 //   To support persistent login sessions, Passport needs to be able to
@@ -27,10 +27,10 @@ passport.deserializeUser(function(obj, done) {
 //   credentials (in this case, an OpenID identifier and profile), and invoke a
 //   callback with a user object.
 passport.use(new SteamStrategy({
-        returnURL: 'http://localhost:3000/auth/return',
-        realm: 'http://localhost:3000/',
-        apiKey: '3EFED48BCD0D9C76C4D2608C10E906C3'
-    },
+    returnURL: 'http://localhost:3000/auth/return',
+    realm: 'http://localhost:3000/',
+    apiKey: '3EFED48BCD0D9C76C4D2608C10E906C3'
+},
     function(identifier, profile, done) {
         // asynchronous verification, for effect...
         process.nextTick(function() {
