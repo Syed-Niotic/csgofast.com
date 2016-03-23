@@ -11,7 +11,12 @@
             <li>Store</li>
             <li>Settings</li>
             <li>
-                <a target="view_window" href="/users/oauth/steam">Login</a>
+                <% if (!user) { %>
+                    <a href="/auth/login">Sign On with Steam</a>
+                <% } else { %>
+                    <a href="#"><%= user.displayName %>. -</a>
+                    <a href='/auth/logout'>Logout</a>
+                <% } %>
             </li>
         </ul>
     </div>
