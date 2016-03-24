@@ -27,10 +27,10 @@ passport.deserializeUser(function(obj, done) {
 //   credentials (in this case, an OpenID identifier and profile), and invoke a
 //   callback with a user object.
 passport.use(new SteamStrategy({
-    returnURL: 'http://localhost:3000/auth/return',
-    realm: 'http://localhost:3000/',
-    apiKey: '3EFED48BCD0D9C76C4D2608C10E906C3'
-},
+        returnURL: 'http://localhost:3000/auth/return',
+        realm: 'http://localhost:3000/',
+        apiKey: '3EFED48BCD0D9C76C4D2608C10E906C3'
+    },
     function(identifier, profile, done) {
         // asynchronous verification, for effect...
         process.nextTick(function() {
@@ -55,10 +55,13 @@ app.use(partials())
 app.set('view engine', 'ejs')
 
 app.use(session({
-    secret: 'your secret',
-    name: 'name of session id',
+    secret: 'cs:go',
+    name: 'user_steam',
     resave: true,
-    saveUninitialized: true
+    saveUninitialized: true,
+    cookie: {
+        maxAge: 60 * 60 * 1000
+    },
 }));
 
 // Initialize Passport!  Also use passport.session() middleware, to support
