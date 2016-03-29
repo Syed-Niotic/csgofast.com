@@ -1,0 +1,24 @@
+<!-- left begin -->
+<div class="col s3">
+    <div>
+        <ul>
+            <li>Play</li>
+            <li>Top Players</li>
+            <li>F.A.Q</li>
+            <li>Game history</li>
+            <li>Giveaway</li>
+            <li>Referral</li>
+            <li>Store</li>
+            <li>Settings</li>
+            <li>
+                <% if (!user) { %>
+                    <a href="/auth/login">Sign On with Steam</a>
+                <% } else { %>
+                    <a href="#"><%= user.displayName %>. -</a>
+                    <a href='/auth/logout'>Logout</a>
+                <% } %>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- left end -->

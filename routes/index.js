@@ -1,9 +1,11 @@
 var express = require('express')
 var router = express.Router()
+
 var passport = require('passport')
+var filters = require('./lib/appfilters')
 
 router.get('/', function(req, res) {
-    res.render('index', {
+    res.render('www/index', {
         title: 'CSGOFAST.COM - TRY YOUR LUCK!',
         user: req.user
     })
